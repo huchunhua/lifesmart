@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+<title>智能灯泡设置</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--相应式框架css-->
+<link href="css/animsition.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<center class="center intellect light">
+		<div class="setwrap">
+			<div class="tit">开关设置</div>
+			<div class="listwrap">
+				<div class="switch" val='4'>
+					<h3>智能灯泡打开</h3>
+					<i class="choice"></i>
+				</div>	
+				<div class="switch on" val='4'>
+					<h3>智能灯泡关闭</h3>
+					<i class="choice"></i>
+				</div>			
+			</div>			
+		</div>		
+		<div class="setwrap colorset">
+			<div class="tit">颜色设置</div>
+			<div class="listwrap">
+				<div class="switch btn_color">
+					<h3>颜色设定</h3>
+					<i class="choice"></i>
+					<div class="colorimg">
+						<img src="./images/image_02.png">
+					</div>
+				</div>	
+				<div class="switch on">
+					<h3>无动作</h3>
+					<i class="choice"></i>
+				</div>			
+			</div>			
+		</div>
+		<div class="save btbox-shadowblue">保存</div>	
+		<div class="lightset">
+			<div class="tabs">
+                <ul class="tab-nav clearfix">
+                    <li class="active">
+                        <h5>
+                            <a href="javascript:;"><i class="icon"></i>精选颜色</a>
+                        </h5>
+                    </li>                    
+                    <li>
+                        <h5>
+                            <a href="javascript:;"><i class="icon"></i>动态效果</a>
+                        </h5>
+                    </li>
+                </ul> 
+                <div class="clear"></div>   
+                <div class="tab-container">
+                    <div class="tab-content classics  active">
+                        <div class="colorblock lblock" val='rgb(242,167,67)'><div class="color_01"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock"  val='rgb(237,118,53)'><div class="color_02"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                          
+                        <div class="colorblock lblock" val='rgb(252,238,92)'><div class="color_03"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(234,60,179)'><div class="color_04"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(198,104,247)'><div class="color_05"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(235,90,45)'><div class="color_06"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(181,249,89)'><div class="color_07"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(117,251,77)'><div class="color_08"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(118,251,179)'><div class="color_09"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(72,142,247)'><div class="color_10"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(109,227,251)'><div class="color_11"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(149,196,250)'><div class="color_12"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(115,20,245)'><div class="color_13"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(241,156,129)'><div class="color_14"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(212,253,185)'><div class="color_15"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(253,242,206)'><div class="color_16"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(240,252,254)'><div class="color_17"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(217,238,253)'><div class="color_18"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                   
+                    </div>                    
+                    <div class="tab-content colorbg">
+                        <div class="colorblock lblock" val='0x8218cc80'><div class="image"><img src="./images/image_01.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8318cc80'><div class="image"><img src="./images/image_02.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                        
+                        <div class="colorblock lblock"  val='0x8418cc80'><div class="image"><img src="./images/image_03.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8518cc80'><div class="image"><img src="./images/image_04.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x8618cc80'><div class="image"><img src="./images/image_05.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8718cc80'><div class="image"><img src="./images/image_06.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                      
+                        <div class="colorblock lblock"  val='0x8818cc80'><div class="image"><img src="./images/image_07.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8918cc80'><div class="image"><img src="./images/image_08.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x8020cc80'><div class="image"><img src="./images/image_09.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8120cc80'><div class="image"><img src="./images/image_10.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                      
+                        <div class="colorblock lblock"  val='0x8a20cc80'><div class="image"><img src="./images/image_11.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8b20cc80'><div class="image"><img src="./images/image_12.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x9318cc80'><div class="image"><img src="./images/image_13.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x9518cc80'><div class="image"><img src="./images/image_14.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                        
+                        <div class="colorblock lblock"  val='0x9718cc80'><div class="image"><img src="./images/image_15.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x9618cc80'><div class="image"><img src="./images/image_16.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x9818cc80'><div class="image"><img src="./images/image_17.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x9918cc80'><div class="image"><img src="./images/image_18.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0xa318cc80'><div class="image"><img src="./images/image_19.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0xa718cc80'><div class="image"><img src="./images/image_20.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock lblock"  val='0xa918cc80'><div class="image"><img src="./images/image_21.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                    </div>
+                </div>       
+            </div>
+
+        	<div class="btnblock topbox-shadow clearfix"><!--添加on类名显示开灯状态-->
+            	<div class="bg_blue btn_colorchoice">完成</div>
+            	<div>取消</div>
+        	</div>  
+		</div>
+	</center>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 选择
+			$(".switch").click(function(){
+				$($($(this).parent()).children(".switch")).removeClass("on");
+				$(this).addClass("on")
+			})
+			lightset();
+            $(".save").click(function(){
+                var color = $(".colorimg").attr("val")
+                console.log(color)
+            })
+		});
+		function lightset(){
+			// 设置面板显示
+			$(".colorset .switch").click(function(){
+				if($(this).hasClass("btn_color")){
+					$(".lightset").css("display",'block')
+				}else{
+					$(".lightset").css("display",'none');
+					$(".colorimg").css("display","none")					
+				}
+			})
+			// 颜色选择
+            // 色块大小响应显示
+			var ch = $(window).height() - 125;
+            var cw = $(window).width();
+            var w  = ((cw - 40) / 2 ) - 10;
+            var h = 145 /315 * w ;
+            $(".colorblock").css("height",h);
+            $(".active_bg").css("height",h).css("line-height",h + 'px');
+            $(".colorbg .active_bg").css("top",-h);
+            $(".tab-container").css("height",ch);
+            // 点击色块选择颜色
+            $(".colorblock").click(function(){
+                $(".colorblock").removeClass("active");
+                $(this).addClass("active");
+                $(".colorblock.active .active_bg").addClass("active");
+                if($(".colorblock.active")){
+                    var val = $(".colorblock.active").attr('val');
+                }else{
+                    var val = 'rgb(0,0,0)';
+                }
+                if($($(this).parent()).hasClass("colorbg")){
+            	    var src = $($(this).find("img")).attr("src");
+                    var val = $(this).attr("val");
+            	    if($(".colorblock.active")){
+            		    $(".btn_colorchoice").click(function(){
+            			     $(".lightset").css("display","none");
+            			     $(".colorimg").css("background","none").css("display","block").attr("val",val);
+            			     $(".colorimg img").css("display","block").attr("src",src);
+            		    })            		
+            	    }else{
+
+            	    }
+
+                }else{
+            	    $(".btn_colorchoice").click(function(){
+            		    $(".lightset").css("display","none");
+            		    $(".colorimg").css("display","block");
+            		    $(".colorimg").css("background-color",val).attr("val",val);
+            		    $(".colorimg img").css("display","none");
+            	    })
+                }
+            });
+            $(".active_bg").click(function(){
+                event.stopPropagation();
+                $(".colorblock.active").removeClass("active");
+                $(this).removeClass("active");
+                var val = 'rgb(0,0,0)';
+            })
+            $(".tab-nav li").click(function(){
+                var index = $(".tab-nav li").index(this);
+                var content = $(".tab-container .tab-content");
+                $(".tab-nav li").removeClass("active");
+                $(this).addClass('active');
+                $(content).removeClass('active')
+                $(content[index]).addClass('active');
+            })
+		}
+	</script>
+</body>
+</html>

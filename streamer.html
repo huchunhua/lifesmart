@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+<title>流光开关设置</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--相应式框架css-->
+<link href="css/animsition.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<center class="center intellect streamer">
+		<div class="setwrap">
+		<div class="tit">开关设置</div>
+		<div class="listwrap">
+			<div class="switch" val='4'>
+				<h3>流光开关打开</h3>
+				<i class="choice"></i>
+			</div>	
+			<div class="switch on" val='4'>
+				<h3>流光开关关闭</h3>
+				<i class="choice"></i>
+			</div>			
+		</div>			
+		</div>
+		<div class="save btbox-shadowblue">保存</div>	
+	</center>
+	<!--弹出层-->
+	<div class="editor_bg">
+		<div class="bg"></div>
+		<div class="editor_cent">
+			<h3>场景添加</h3>
+			<div class="from">
+				<form>
+					<div class="list"><input type="text" placeholder="请输入场景名称" class="list-input"></div>
+					<div class="list">
+						<button class="bg_blue addsure">保存</button>
+						<a href="#" class="editor_cancel">取消</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!---->
+	<div class="del_bg">
+		<div class="bg"></div>
+		<div class="del_cent">
+			<h3>是否删除设备?</h3>
+			<div class="from">
+				<form>
+					<div class="list">
+						<button class="bg_red">删除</button>
+						<a href="#" class="del_cancel">取消</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 选择
+			$(".switch").click(function(){
+				$(".switch").removeClass("on");
+				$(this).addClass("on")
+			})
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

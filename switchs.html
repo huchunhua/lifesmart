@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+	<title>智能开关</title>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="bggray">
+	<div class="bg-wrap">
+		<img src="./images/switchs.png">
+	</div>
+	<div class="switchswrap">
+		<div class="switch leftswitch btbox-shadow">
+			<h3>左侧开关（<span stutas="off">已关闭</span>）</h3>
+			<div class="btn">
+				<div class="cir"></div>
+			</div>
+		</div>		
+		<div class="switch leftswitch btbox-shadow">
+			<h3>右侧开关（<span stutas="on">已开启</span>）</h3>
+			<div class="btn btn-active">
+				<div class="cir"></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".btn").click(function(){
+  			$(this).toggleClass("btn-active");
+  			var stutas = $(this).prev().children("span").html();
+  			if(stutas === "已关闭"){
+  				$(this).prev().children("span").html("已开启")
+  			}else{
+  				$(this).prev().children("span").html("已关闭")
+  			}
+		});
+	})
+</script>
+</html>

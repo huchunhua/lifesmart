@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+<title>设备选择</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--相应式框架css-->
+<link href="css/animsition.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<center class="center add_center top20">
+		<form>
+			<div class="list">
+				<input type="text" placeholder="设备序列号" class="list-input">
+			</div>
+			<div class="list">
+				<input type="text" placeholder="设备验证码" class="list-input">
+			</div>
+			<div class="list">
+				<input type="text" placeholder="设备名称" class="list-input">
+			</div>
+			<div class="list">
+				<a class="bg_blue add">立即添加</a>
+				<!--<button class="bg_blue add">立即添加</button>-->
+			</div>
+
+		</form>
+	</center>
+	<!--弹出层-->
+	<div class="add_bg">
+		<div class="bg"></div>
+		<div class="add_cent add_fail add_padding"><!--加上class add_fail 显示失败图标-->
+			<div class="bg_img">&nbsp;</div>
+			<p>请稍等<br>正在连接设备</p>
+		</div>
+	</div>
+	<!---->
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $(".add").click(function(){
+		    $(".add_bg,.bg").fadeIn();
+		  });
+		  $(".bg").click(function(){
+		    $(".add_bg,.bg").fadeOut();
+		  });
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

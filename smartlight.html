@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+	<title>智能灯泡</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!--相应式框架css-->
+	<!-- <link href="css/animsition.css" type="text/css" rel="stylesheet" /> -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <center class="center">
+          <div class="tabs">
+                <ul class="tab-nav clearfix">
+                    <li class="active">
+                        <h5>
+                            <a href="javascript:;"><i class="icon"></i>精选颜色</a>
+                        </h5>
+                    </li>                    
+                    <li>
+                        <h5>
+                            <a href="javascript:;"><i class="icon"></i>动态效果</a>
+                        </h5>
+                    </li>
+                </ul> 
+                <div class="clear"></div>   
+                <div class="tab-container">
+                    <div class="tab-content classics  active">
+                        <div class="colorblock lblock" val='rgb(242,167,67)'><div class="color_01"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock"  val='rgb(237,118,53)'><div class="color_02"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                          
+                        <div class="colorblock lblock" val='rgb(252,238,92)'><div class="color_03"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(234,60,179)'><div class="color_04"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(198,104,247)'><div class="color_05"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(235,90,45)'><div class="color_06"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(242,167,67)'><div class="color_07"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(117,251,77)'><div class="color_08"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(118,251,179)'><div class="color_09"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(72,142,247)'><div class="color_10"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(109,227,251)'><div class="color_11"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(149,196,250)'><div class="color_12"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(115,20,245)'><div class="color_13"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(241,156,129)'><div class="color_14"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(212,253,185)'><div class="color_15"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(253,242,206)'><div class="color_16"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                           
+                        <div class="colorblock lblock" val='rgb(240,252,254)'><div class="color_17"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>
+                        <div class="colorblock rblock" val='rgb(217,238,253)'><div class="color_18"><div class="active_bg"><i class="icon"></i>已选择</div></div></div>                   
+                    </div>                    
+                    <div class="tab-content colorbg">
+                        <div class="colorblock lblock" val='0x8218cc80'><div class="image"><img src="./images/image_01.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8318cc80'><div class="image"><img src="./images/image_02.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                        
+                        <div class="colorblock lblock"  val='0x8418cc80'><div class="image"><img src="./images/image_03.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8518cc80'><div class="image"><img src="./images/image_04.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x8618cc80'><div class="image"><img src="./images/image_05.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8718cc80'><div class="image"><img src="./images/image_06.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                      
+                        <div class="colorblock lblock"  val='0x8818cc80'><div class="image"><img src="./images/image_07.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8918cc80'><div class="image"><img src="./images/image_08.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x8020cc80'><div class="image"><img src="./images/image_09.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8120cc80'><div class="image"><img src="./images/image_10.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                      
+                        <div class="colorblock lblock"  val='0x8a20cc80'><div class="image"><img src="./images/image_11.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x8b20cc80'><div class="image"><img src="./images/image_12.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x9318cc80'><div class="image"><img src="./images/image_13.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x9518cc80'><div class="image"><img src="./images/image_14.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                        
+                        <div class="colorblock lblock"  val='0x9718cc80'><div class="image"><img src="./images/image_15.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x9618cc80'><div class="image"><img src="./images/image_16.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0x9818cc80'><div class="image"><img src="./images/image_17.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0x9918cc80'><div class="image"><img src="./images/image_18.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>                       
+                        <div class="colorblock lblock"  val='0xa318cc80'><div class="image"><img src="./images/image_19.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock rblock"  val='0xa718cc80'><div class="image"><img src="./images/image_20.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                        <div class="colorblock lblock"  val='0xa918cc80'><div class="image"><img src="./images/image_21.png"></div><div class="active_bg"><i class="icon"></i>已选择</div></div>
+                    </div>
+                </div>       
+            </div>
+
+
+        <button class="on-off on topbox-shadow"><!--添加on类名显示开灯状态-->
+            <i class="turnon">开灯</i>
+        </button>       
+    </center>
+
+</body>
+<script>
+    $(document).ready(function(){
+        var ch = $(window).height() - 115;
+        var cw = $(window).width();
+        var w  = ((cw - 40) / 2 ) - 10;
+        var h = 145 /315 * w ;
+        $(".colorblock").css("height",h);
+        $(".active_bg").css("height",h).css("line-height",h + 'px');
+        $(".colorbg .active_bg").css("top",-h);
+        $(".tab-container").css("height",ch);
+        $(".colorblock").click(function(){
+            $(".colorblock").removeClass("active");
+            $(this).addClass("active");
+            $(".colorblock.active .active_bg").addClass("active");
+            if($(".colorblock.active")){
+                val = $(".colorblock.active").attr('val');//val为需要的颜色值
+            }
+        });
+        $(".active_bg").click(function(){
+             event.stopPropagation();
+            $(this).removeClass("active");
+            val = 'rgb(0,0,0)';//val为需要的颜色值
+        })
+        $(".tab-nav li").click(function(){
+            var index = $(".tab-nav li").index(this);
+            var content = $(".tab-container .tab-content");
+            $(".tab-nav li").removeClass("active");
+            $(this).addClass('active');
+            $(content).removeClass('active')
+            $(content[index]).addClass('active');
+        })
+    })
+</script>
+</html>

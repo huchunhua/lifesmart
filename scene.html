@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /><!--判断手机端代码-->
+<title>场景房间</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--相应式框架css-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<ul class="tab-nav clearfix">
+        <li>
+            <h5>
+                <a href="./index.html"><i class="icon"></i>设备列表</a>
+            </h5>
+        </li>                    
+        <li class="active">
+            <h5>
+                <a href="./scene.html"><i class="icon"></i>场景模式</a>
+            </h5>
+        </li>
+    </ul>
+	<center class="center top20 intellect equipblock">
+    	<div class="addbtn">
+    		+&nbsp新增房间
+    	</div>
+		<div class="list">
+			<i class="icon icon_06"></i>
+			<div class="text">
+				<h3><span class="name">卧室</span><span class="modifybtn">修改</span></h3>
+				<h4>场景(3)</h4>
+			</div>
+			<div class="edit">
+				<a href="room.html" class="editor bg_blue">进入</a>
+				<button class="del bg_red">删除</button>
+			</div>
+		</div>			
+		<div class="list">
+			<i class="icon icon_06"></i>
+			<div class="text">
+				<h3><span class="name">客厅场景模式</span><span class="modifybtn">修改</span></h3>
+				<h4>场景(0)</h4>
+			</div>
+			<div class="edit">
+				<a href="room.html" class="editor bg_blue">进入</a>
+				<button class="del bg_red">删除</button>
+			</div>
+		</div>		
+	</center>
+	<!--弹出层-->
+	<div class="editor_bg">
+		<div class="bg"></div>
+		<div class="editor_cent">
+			<h3>房间添加</h3>
+			<div class="from">
+				<!-- <form> -->
+					<div class="list"><input type="text" placeholder="请输入房间名称" class="list-input"></div>
+					<div class="list">
+						<button class="bg_blue addsure">保存</button>
+						<button class="editor_cancel">取消</button>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+	<!---->
+	<div class="del_bg">
+		<div class="bg"></div>
+		<div class="del_cent">
+			<h3>是否删除设备?</h3>
+			<div class="from">
+				<!-- <form> -->
+					<div class="list">
+						<button class="bg_red delsure">删除</button>
+						<button class="del_cancel bg_blue">取消</button>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+	<div class="modify_bg">
+		<div class="bg"></div>
+		<div class="editor_cent">
+			<h3>名称修改</h3>
+			<div class="from">
+				<!-- <form> -->
+					<div class="list"><input type="text" placeholder="请输入房间新名称" class="list-input"></div>
+					<div class="list">
+						<button class="bg_blue modifysure">确定</button>
+						<button class="editor_cancel">取消</button>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 新增房间
+			// 房间添加
+		  $(".addbtn").click(function(){
+		    $(".editor_bg,.bg").fadeIn();
+		    // if($.trim(name).length !== 0){
+		    	$(".addsure").click(function(){
+		  			var name = $(".editor_cent input").val();
+		  			if($.trim(name).length !== 0){
+		  				var list = '<div class="list">' +
+									'<i class="icon icon_06"></i>' +
+									'<div class="text">' +
+										'<h3><span class="name">' + name + '</span><span class="modifybtn">修改</span></h3>' +
+										'<h4>场景(3)</h4>' +
+									'</div>'+
+									'<div class="edit">'+
+										'<a href="room.html" class="editor bg_blue">进入</a>' +
+										'<button class="del bg_red">删除</button>'+
+									'</div>' +
+								'</div>';
+		     			$("center").append(list);
+		    			$(".editor_bg").fadeOut();
+		    		}else{
+		  				$(".editor_cancel").click(function(){
+		    				$(".editor_bg").fadeOut();		  		
+		  				})		    			
+		    		}
+		  		});
+
+		  });
+		  // 房间删除
+		  $("center").on("click",".del",function(){
+		  	$($(this).parent().parent()).attr("del","del");
+		    $(".del_bg,.bg").fadeIn();
+		    $(".del_cent .delsure").click(function(){
+		    	$(".del_bg,.bg").fadeOut();	
+		    	$("[del=del]").remove()
+		    })
+		    $(".del_cancel").click(function(){
+		    	$(".del_bg,.bg").fadeOut();			    	
+		    })
+		  });
+		  // 修改名称
+		  $("center").on("click",".modifybtn",function(){
+		  	var that = $($(this).prev())
+		  	$(".modify_bg,.bg").fadeIn();
+		  	$(".modify_bg .modifysure").on("click",function(){
+		  		var name = $(".modify_bg input").val();
+		  		if($.trim(name).length !== 0){
+		  			$(".modify_bg,.bg").fadeOut();	
+		  			$(that).text(name)	
+		  		}else{
+		  			$(".modify_bg .editor_cancel").click(function(){
+		  				$(".modify_bg,.bg").fadeOut();			  				
+		  			})
+		  		}		  		
+		  	})
+		  })
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

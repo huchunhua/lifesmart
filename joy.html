@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+	<title>合家欢展厅</title>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="bggray">
+	<div class="switchswrap">
+		<div class="switch btbox-shadow on" val='0'>
+			<h3>默认模式</h3>
+			<i class="choice"></i>
+		</div>			
+		<div class="switch btbox-shadow" val='1'>
+			<h3>欢迎模式</h3>
+			<i class="choice"></i>
+		</div>		
+		<div class="switch btbox-shadow" val='2'>
+			<h3>电视模式</h3>
+			<i class="choice"></i>
+		</div>		
+		<div class="switch btbox-shadow" val='3'>
+			<h3>电影模式</h3>
+			<i class="choice"></i>
+		</div>		
+		<div class="switch btbox-shadow" val='4'>
+			<h3>KTV模式</h3>
+			<i class="choice"></i>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var val = $(".switch.on").attr("val");
+		$(".switch").click(function(){
+			$(".switch").removeClass("on");
+			$(this).addClass("on");
+			//获取val
+		});
+	})
+</script>
+</html>

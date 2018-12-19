@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+	<title>智能灯泡</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!--相应式框架css-->
+	<!-- <link href="css/animsition.css" type="text/css" rel="stylesheet" /> -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+ 	<!-- slider -->
+ 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/rangeslider.css">
+	<script src="./js/rangeslider.min.js"></script>
+    <!-- 拾色器 -->
+    <link rel="stylesheet" href="css/colpick.css" type="text/css" />
+    <script src="js/colpick.js"></script>
+</head>
+<body>
+    <center class="center">
+    <div class="formwrap btbox-shadow">
+        <form action="">
+            <div id="picker"></div>
+        </form>     
+    </div>
+    <div class="slider btbox-shadow">
+        <div>
+            <br>
+            <input type="range" min="0" max="100" step="1" value="0" data-rangeslider>
+            <output></output>
+        </div>
+    </div>
+    <div class="numwrap clearfix">
+        <p class="fl">0</p>
+        <span>白光亮度</span>
+        <p class="fr">100</p>
+    </div>
+    <div class="submitcolor btbox-shadow">
+        <button>应用色彩</button>
+    </div>
+    <button class="on-off on topbox-shadow"><!--添加on类名显示开灯状态-->
+        <i class="turnon">开灯</i>
+    </button>       
+    </center>
+
+</body>
+<script>
+    // 拾色器
+    $('#picker').colpick({
+        flat:true,
+        layout:'hex',
+        submit:0,
+    });
+    $(".submitcolor").click(function(){
+        var color = $(".colpick_new_color").css("background-color");
+        var w = $("output").val();
+        var rgbw = color.slice(4,-1) + "," +  w;
+        console.log(rgbw)
+    })
+    // 白光亮度
+    $(function() {
+        var $document   = $(document);
+        var selector    = '[data-rangeslider]';
+        var $inputRange = $(selector);
+
+        // Example functionality to demonstrate a value feedback
+        // and change the output's value.
+        function valueOutput(element) {
+            var value = element.value;
+            var output = element.parentNode.getElementsByTagName('output')[0];
+
+            output.innerHTML = value;
+        }
+
+        // Initial value output
+        for (var i = $inputRange.length - 1; i >= 0; i--) {
+            valueOutput($inputRange[i]);
+        };
+
+        // Update value output
+        $document.on('input', selector, function(e) {
+            valueOutput(e.target);
+        });
+
+        // Initialize the elements
+        $inputRange.rangeslider({
+            polyfill: false
+        });
+
+        // Example functionality to demonstrate programmatic value changes
+        $document.on('click', '#js-example-change-value button', function(e) {
+            var $inputRange = $('input[type="range"]', e.target.parentNode);
+            var value = $('input[type="number"]', e.target.parentNode)[0].value;
+
+            $inputRange
+                .val(value)
+                .change();
+        });
+
+        // Example functionality to demonstrate programmatic attribute changes
+        $document.on('click', '#js-example-change-attributes button', function(e) {
+            var $inputRange = $('input[type="range"]', e.target.parentNode);
+            var attributes = {
+                min: $('input[name="min"]', e.target.parentNode)[0].value,
+                max: $('input[name="max"]', e.target.parentNode)[0].value,
+                step: $('input[name="step"]', e.target.parentNode)[0].value
+            };
+
+            $inputRange
+                .attr(attributes)
+                .rangeslider('update', true);
+        });
+
+        // Example functionality to demonstrate destroy functionality
+        $document
+            .on('click', '#js-example-destroy button[data-behaviour="destroy"]', function(e) {
+                $('input[type="range"]', e.target.parentNode).rangeslider('destroy');
+            })
+            .on('click', '#js-example-destroy button[data-behaviour="initialize"]', function(e) {
+                $('input[type="range"]', e.target.parentNode).rangeslider({ polyfill: false });
+            });
+    });
+
+</script>
+</html>

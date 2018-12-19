@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" /><!--判断手机端代码-->
+<title>场景列表</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<!--相应式框架css-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<center class="center top20 intellect room">
+		<div class="listwrap">
+		<div class="list model_list  btbox-shadow">
+				<i class="choice"></i>
+				<h3><span class="name">KTV超级模式</span><span class="modifybtn">修改</span></h3>
+				<div class="edit">
+					<a href="equipment.html" class="editor bg_blue">设置</a>
+					<button class="del bg_red">删除</button>
+				</div>
+		</div>		
+		<div class="list model_list  btbox-shadow on">
+				<i class="choice"></i>
+				<h3><span class="name">电视模式</span><span class="modifybtn">修改</span></h3>
+				<div class="edit">
+					<a href="equipment.html" class="editor bg_blue">设置</a>
+					<button class="del bg_red">删除</button>
+				</div>
+		</div>
+		<div class="list model_list  btbox-shadow">
+				<i class="choice"></i>
+				<h3><span class="name">睡觉模式</span><span class="modifybtn">修改</span></h3>
+				<div class="edit">
+					<a href="equipment.html" class="editor bg_blue">设置</a>
+					<button class="del bg_red">删除</button>
+				</div>
+		</div>			
+		<div class="list model_list  btbox-shadow">
+				<i class="choice"></i>
+				<h3><span class="name">默认关闭模式</span><span class="modifybtn">修改</span></h3>
+				<div class="edit">
+					<a href="equipment.html" class="editor bg_blue">设置</a>
+					<button class="del bg_red">删除</button>
+				</div>
+		</div>				
+		</div>
+		<div class="addbtn btbox-shadowblue">
+    		+&nbsp新增场景
+    	</div>		
+	</center>
+	<!--弹出层-->
+	<div class="editor_bg">
+		<div class="bg"></div>
+		<div class="editor_cent">
+			<h3>场景添加</h3>
+			<div class="from">
+					<div class="list"><input type="text" placeholder="请输入场景名称" class="list-input"></div>
+					<div class="list">
+						<button class="bg_blue addsure">保存</button>
+						<button class="editor_cancel">取消</button>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!---->
+	<div class="del_bg">
+		<div class="bg"></div>
+		<div class="del_cent">
+			<h3>是否删除设备?</h3>
+			<div class="from">
+					<div class="list">
+						<button class="bg_red delsure">删除</button>
+						<button class="del_cancel bg_blue">取消</button>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="modify_bg">
+		<div class="bg"></div>
+		<div class="editor_cent">
+			<h3>名称修改</h3>
+			<div class="from">
+				<!-- <form> -->
+					<div class="list"><input type="text" placeholder="请输入模式新名称" class="list-input"></div>
+					<div class="list">
+						<button class="bg_blue modifysure">确定</button>
+						<button class="editor_cancel">取消</button>
+					</div>
+				<!-- </form> -->
+			</div>
+		</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 修改名称
+		  $("center").on("click",".modifybtn",function(){
+		  	var that = $($(this).prev())
+		  	$(".modify_bg,.bg").fadeIn();
+		  	$(".modify_bg .modifysure").on("click",function(){
+		  		var name = $(".modify_bg input").val();
+		  		if($.trim(name).length !== 0){
+		  			$(".modify_bg,.bg").fadeOut();	
+		  			$(that).text(name)	
+		  		}else{
+		  			$(".modify_bg .editor_cancel").click(function(){
+		  				$(".modify_bg,.bg").fadeOut();			  				
+		  			})
+		  		}		  		
+		  	})
+		  })
+		// 新增
+			// 添加
+		  $(".addbtn").click(function(){
+		    $(".editor_bg,.bg").fadeIn();
+		    $(".addsure").on("click",function(){
+		  		var name = $(".editor_cent input").val();
+		    	if($.trim(name).length !== 0){
+		    		var list = '<div class="list model_list  btbox-shadow">' +
+						'<i class="choice"></i>' +
+						'<h3><span class="name">' + name + '</span><span class="modifybtn">修改</span></h3>' +
+						'<div class="edit">' +
+							'<a href="equipment.html" class="editor bg_blue">设置</a>' +
+							'<button class="del bg_red">删除</button>' +
+						'</div>' +
+					'</div>';
+		     		$(".listwrap").append(list);
+		     		$(".editor_bg").fadeOut();
+		    	}else{
+		  			$(".editor_cancel").click(function(){
+		    			$(".editor_bg").fadeOut();		  		
+		  			})		    		
+		    	}
+		  	});
+		  	$(".editor_cancel").click(function(){
+		    	$(".editor_bg").fadeOut();		  		
+		  	})
+		  });
+		  // 删除
+		  $(".listwrap").on("click",".del",function(){
+		  	$($(this).parent().parent()).attr("del","del");
+		    $(".del_bg,.bg").fadeIn();
+		    $(".del_cent .delsure").click(function(){
+		    	$(".del_bg,.bg").fadeOut();	
+		    	$("[del=del]").remove()
+		    })
+		    $(".del_cancel").click(function(){
+		    	$(".del_bg,.bg").fadeOut();			    	
+		    })
+		  });
+		// 选择
+		$(".listwrap").on("click",".list",function(){
+			$(".list").removeClass("on");
+			$(this).addClass("on")
+		})
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
